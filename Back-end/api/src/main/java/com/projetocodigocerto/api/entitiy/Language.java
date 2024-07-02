@@ -1,28 +1,41 @@
 package com.projetocodigocerto.api.entitiy;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+//import javax.persistence.Id;
 
-@Entity
-    @Table(name = "language")
+    @Entity
+    @Table(name = "language_table")
     public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_language;
-    private String name_language;
+    @Column(name = "id_language")
+    private Long idLanguage;
 
-    public Long getId_language() {
-        return id_language;
-    }
+   // @Column(name = "name_language")
+    private String nameLanguage;
 
-    public void setId_language(Long id_language) {
-        this.id_language = id_language;
-    }
+        public Language() {
+        }
 
-    public String getName_language() {
-        return name_language;
-    }
+        public Language(Long idLanguage, String nameLanguage) {
+            this.idLanguage = idLanguage;
+            this.nameLanguage = nameLanguage;
+        }
 
-    public void setName_language(String name_language) {
-        this.name_language = name_language;
+        public Long getIdLanguage() {
+            return idLanguage;
+        }
+
+        public void setIdLanguage(Long idLanguage) {
+            this.idLanguage = idLanguage;
+        }
+
+        public String getNameLanguage() {
+            return nameLanguage;
+        }
+
+        public void setNameLanguage(String nameLanguage) {
+            this.nameLanguage = nameLanguage;
+        }
     }
-}

@@ -5,15 +5,29 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class LanguageDTO {
 
-    private Long id_language;
+    private Long idLanguage;
 
-    private String name_language;
+    private String nameLanguage;
 
+    public Long getIdLanguage() {
+        return idLanguage;
+    }
 
+    public void setIdLanguage(Long idLanguage) {
+        this.idLanguage = idLanguage;
+    }
+
+    public String getNameLanguage() {
+        return nameLanguage;
+    }
+
+    public void setNameLanguage(String nameLanguage) {
+        this.nameLanguage = nameLanguage;
+    }
 }

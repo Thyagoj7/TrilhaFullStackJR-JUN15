@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+//import javax.persistence.Id;
 
 @Entity
 @Table(name= "project_table")
@@ -24,6 +25,17 @@ public class Project {
             joinColumns = @JoinColumn(name = "id_project"),
             inverseJoinColumns = @JoinColumn(name = "id_language"))
     private Set<Language> languages = new HashSet<>();
+
+    public Project() {
+    }
+
+    public Project(Long id_project, String name_project, String description_project, Date date_project, Set<Language> languages) {
+        this.id_project = id_project;
+        this.name_project = name_project;
+        this.description_project = description_project;
+        this.date_project = date_project;
+        this.languages = languages;
+    }
 
     public Long getId_project() {
         return id_project;
