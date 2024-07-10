@@ -1,12 +1,18 @@
 .card {
     border: 1px solid #ddd;
+    background-color: #ddd;
     border-radius: 5px;
+    flex:auto;
     padding: 15px;
     margin: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 10px;
-    width: 10px;
+    height: 300px;
+    width: 300px;
   }
+
+  /* .card-header{
+
+  } */
   
   .card-header h2 {
     margin: 0 0 10px;

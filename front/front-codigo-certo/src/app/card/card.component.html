@@ -1,14 +1,18 @@
+  
 <div class="card">
     <div class="card-header">
-      <!-- Título do card -->
       <h2>{{ title }}</h2>
     </div>
     <div class="card-body">
-      <!-- Conteúdo do card -->
       <p>{{ content }}</p>
     </div>
+    <li *ngFor="let language of languages">
+      ID: {{ language.idLanguage }}, Name: {{ language.nameLanguage }}
+    </li>
+    <!-- <div class="card-body">
+      <p>{{ languages }}</p>
+    </div> -->
     <div class="card-footer">
-      <!-- Rodapé do card -->
       <button (click)="onActionClick()">Ação</button>
     </div>
   </div>

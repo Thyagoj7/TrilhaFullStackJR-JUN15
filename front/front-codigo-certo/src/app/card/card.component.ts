@@ -1,3 +1,6 @@
+import { Language } from '../language.model';
+import { Project } from '../project.model';
+import { ProjectService } from './../project.service';
 import { Component, Input } from '@angular/core';
 
 
@@ -8,12 +11,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() title: string = '';
-  @Input() content: string = 'Primeiro Card';
-
+  @Input() content: string = '';
+  @Input() languages: Language[] = [];
   onActionClick() {
-    // Lógica ao clicar no botão de ação
     console.log('Ação clicada!');
-
+    console.log(this.title);
+    console.log(this.languages);
   }
 
 }

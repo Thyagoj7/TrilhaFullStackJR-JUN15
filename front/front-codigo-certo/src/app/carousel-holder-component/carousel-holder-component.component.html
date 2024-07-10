@@ -1,19 +1,6 @@
-<title>Projefix</title>
-
-<header>
-    <div class="container">
-        <h2 class="logo">ProjectFLIX</h2>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Séries</a>
-            <a href="#">Filmes</a>
-            <a href="#">Documentários</a>
-        </nav>
-    </div>
-</header>
-
-<main>
+<!-- <main>
     <div class="filme-principal">
+        <h1>carrosel</h1>
        
         <div class="container">
             <h3 class="titulo">POWER</h3>
@@ -31,12 +18,17 @@
     </div>
     </div>
 </main>
-
+<div class="container-car">
 <div>Some tags before</div>
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide><img src="assets/java.jpg"></ng-template>  
-    <ng-template carouselSlide><img src="assets/java.jpg"></ng-template>  
-    <ng-template carouselSlide><img src="assets/java.jpg"></ng-template>  
-    <ng-template carouselSlide><img src="assets/java.jpg"></ng-template> 
-  </owl-carousel-o>
-  <div>Some tags after</div>
+    <ng-container *ngFor="let slide of slidesStore">
+        <ng-template carouselSlide [id]="slide.id">
+            <div>
+                <h4>{{ slide.name }}</h4>
+                <p>{{ slide.description }}</p>
+            </div>
+          <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+</div> -->

@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { CarouselHolderComponentComponent} from './carousel-holder-component/carousel-holder-component.component';
+import { HeaderComponent } from './header/header.component';
+import { ProjectService } from './project.service';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,16 +17,18 @@ import { CarouselHolderComponentComponent} from './carousel-holder-component/car
   declarations: [
     AppComponent,
     CardComponent,
-    CarouselHolderComponentComponent
+    CarouselHolderComponentComponent,
+    HeaderComponent,
+    ProjectListComponent
     
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
